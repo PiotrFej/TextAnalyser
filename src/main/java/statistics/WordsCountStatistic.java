@@ -16,7 +16,7 @@ public class WordsCountStatistic implements I_Statistic
                 .orElseThrow(IllegalArgumentException::new);
     }
 
-    @Override
+   /* @Override
     public String interpret(String text) {
 
         Map<String, Long> finalMap = new LinkedHashMap<>();
@@ -35,6 +35,11 @@ public class WordsCountStatistic implements I_Statistic
                  .toString();
 
 
+    }*/
+
+    @Override
+    public String interpret(String text) {
+        return "Tekst zawiera: " + analize(text)+" slow.";
     }
 
 }

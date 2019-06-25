@@ -20,6 +20,6 @@ public class MostFrequentWordsAnalyser implements I_Statistic <List<String>>
 
     @Override
     public String interpret(String text) {
-        return null;
+        return "Najpopularniejsze slowa to: " + analize(text) + ".";
     }
 }

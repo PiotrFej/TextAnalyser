@@ -39,6 +39,6 @@ public class TenLongestWordsOccuredOnlyOnce implements I_Statistic {
     @Override
     public String interpret(String text)
     {
-        return null;
+        return "Najdluzsze slowa wystepujace w tekscie to: " + analize(text);
     }
 }
