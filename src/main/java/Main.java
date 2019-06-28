@@ -1,4 +1,5 @@
 import languageDetector.FrequencyLanguageDetector;
+import languageDetector.TenMostFrequentCharacters;
 import statistics.MostFrequentWordsAnalyser;
 import statistics.TenLongestWordsOccuredOnlyOnce;
 import statistics.WordsCountStatistic;
@@ -15,6 +16,7 @@ public class Main
         MostFrequentWordsAnalyser mfwa = new MostFrequentWordsAnalyser();
         TenLongestWordsOccuredOnlyOnce longest = new TenLongestWordsOccuredOnlyOnce();
         FrequencyLanguageDetector fld = new FrequencyLanguageDetector();
+        TenMostFrequentCharacters tenMostFrequentCharacters = new TenMostFrequentCharacters();
 
        //wcs.analize(text);
         System.out.println(wcs.interpret(text));
@@ -25,7 +27,11 @@ public class Main
         //longest.analize(text);
         System.out.println(longest.interpret(text));
 
-        System.out.println(fld.interpret(text));
+        System.out.println("------------------------------------");
+
+       // System.out.println(fld.interpret(text));
+
+        System.out.println(tenMostFrequentCharacters.interpret(text));
 
 
 

@@ -21,6 +21,12 @@ public class FrequencyLanguageDetector implements I_Statistic <Map<Character, Do
                 .reduce(Long::sum)      // sumowanie wartości
                 .orElseThrow(IllegalArgumentException::new);
 
+       /* return map       // map zwraca Character i Double- % czestotliwosci wystepowania
+                .entrySet()
+                .stream()
+                .collect(Collectors.toMap(e -> e.getKey(),
+                        e -> (e.getValue().doubleValue() / total_value) * 100.0));*/
+
         Map<Character, Double> map2 = map       // map2 zwraca Character i Double- % czestotliwosci wystepowania
                 .entrySet()
                 .stream()
@@ -32,6 +38,8 @@ public class FrequencyLanguageDetector implements I_Statistic <Map<Character, Do
                 .sorted((a, b) -> b.getValue().compareTo(a.getValue())) // map2 powinna tutaj porównywać value od poszczegolnych liter, a nie robi tego...
                 .limit(10)
                 .collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue().doubleValue()));
+
+
     }
 
     @Override
